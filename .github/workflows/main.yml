@@ -42,7 +42,7 @@ jobs:
         git diff
         git config --global user.email "ashishsushilpatel@gmail.com"
         git config --global user.name "Ashish Patel"
-        git diff --quiet || (git add README.md && git commit -m "chore: update README)
+        git diff --quiet || (git add README.md && git commit -m "chore: update README")
         git push
     - name: Setup Node.js
       uses: actions/setup-node@v1
