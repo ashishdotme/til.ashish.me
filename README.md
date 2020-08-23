@@ -18,4 +18,5 @@ My Today I Learned snippets. Inspired by [simonw/til](https://github.com/simonw/
 ## git
 
 * [Exclude node_modules from all sub folders](https://github.com/ashishdotme/til/blob/master/git/exlude-node-moudles-from-all-subfolders.md) - 2020-08-23
+* [Undo last commit](https://github.com/ashishdotme/til/blob/master/git/undo-last-commit.md) - 2020-08-23
 <!-- index ends -->
