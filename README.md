@@ -30,4 +30,8 @@
 
 - [Exclude node_modules from all sub folders](https://github.com/ashishdotme/til/blob/master/git/exlude-node-moudles-from-all-subfolders.md) - 2020-08-23
 - [Undo last commit](https://github.com/ashishdotme/til/blob/master/git/undo-last-commit.md) - 2020-08-23
+
+## dayjs
+
+- [Get the start and end of current week](https://github.com/ashishdotme/til/blob/master/dayjs/get-the-start-and-end-of-current-week.md) - 2020-08-25
 <!-- index ends -->
