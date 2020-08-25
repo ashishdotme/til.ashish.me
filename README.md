@@ -10,7 +10,7 @@
 <a href="https://img.shields.io/github/workflow/status/ashishdotme/til.ashish.me/Build%20til.ashish.me/master?style=for-the-badge"><img src="https://img.shields.io/github/workflow/status/ashishdotme/til.ashish.me/Build%20til.ashish.me/master?style=for-the-badge"></a>
 </p>
 
-<p align="center">📝 My Today I Learned snippets. Inspired by [simonw/til](https://github.com/simonw/til)</p>
+<p align="center">📝 My Today I Learned snippets. Inspired by <a href="hhttps://github.com/simonw/til">simonw/til</a></p>
 
 <!-- index starts -->
 
