@@ -52,7 +52,7 @@ jobs:
       env:
         NOW_TOKEN: ${{ secrets.NOW_TOKEN }}
       run: |-
-          datasette publish vercel notes.db \
+          datasette publish vercel til.db \
             --token $NOW_TOKEN \
             --branch master \
             --project ashish-til \
