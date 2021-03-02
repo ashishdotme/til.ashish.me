@@ -1,6 +1,7 @@
 name: Build til.ashish.me
 
 on:
+  workflow_dispatch:
   push:
     branches:
     - master
