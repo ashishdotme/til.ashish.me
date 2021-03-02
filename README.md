@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">📝 My Today I Learned snippets. Inspired by <a href="hhttps://github.com/simonw/til">simonw/til</a></p>
-<p align="center"><a href="hhttps://til.ashish.me">https://til.ashish.me</a></p>  
+<p align="center"><a href="https://til.ashish.me">https://til.ashish.me</a></p>  
 
 <!-- index starts -->
 ## mocha
