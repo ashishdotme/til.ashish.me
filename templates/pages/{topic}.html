@@ -1,16 +1,21 @@
-{% extends "note_base.html" %} {% block title %}Ashish Patel: TIL{% endblock %}<!DOCTYPE html>
+{% extends "note_base.html" %}
 
-{% block extra_head %}
-<link href="https://github.com/ashishdotme" rel="me" />
-<link rel="alternate" type="application/atom+xml" title="Atom" href="/til/feed.atom" />
-<style>
+{% set tils = sql("""
+    select * from til where topic = :topic order by created_utc
+""", {"topic": topic}, database="til")
+%}
 
-</style>
-{% endblock %} {% block body %}
+{% block title %}Ashish Patel: TIL on {{ topic }}{% endblock %}<!DOCTYPE html>
+
+{% block body %}
+
+{% if not tils %}
+    {{ raise_404("No Notes found") }}
+{% endif %}
 
 <section class="hero is-light">
   <div class="hero-body">
-    <a class="title" href="/">Ashish Patel: TIL</a>
+    <a class="title" href="/">Ashish Patel: TIL on {{ topic }}</a>
     <p class="subtitle mt-1">
       <a style="text-decoration: none" href="/til/feed.atom" title="Atom feed"
         ><svg xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 256 256">
@@ -56,17 +61,11 @@
     </form>
   </div>
 </section>
-<section class="body content mt-2 mb-5">
-{% for row in sql("select topic from til group by topic order by max(created_utc) desc",
-database="til") %}
-<h3>{{ row.topic }}</h3>
-<ul>
-  {% for til in sql("select * from til where topic = :topic order by created_utc desc", {"topic":
-  row.topic}, database="til") %}
-  <li>
-    <a href="/{{ til.topic }}/{{ til.slug }}">{{ til.title }}</a> - {{ til.created[:10] }}
-  </li>
+<section class="content body mt-2 mb-5">
+  <ul>
+  {% for til in notes %}
+      <li><a href="/{{ til.topic }}/{{ til.slug }}">{{ til.title }}</a> - {{ til.created[:10] }}</li>
   {% endfor %}
-</ul>
-{% endfor %} {% endblock %}
+  </ul>
 </section>
+{% endblock %}

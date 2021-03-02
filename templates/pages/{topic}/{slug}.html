@@ -1,16 +1,39 @@
-{% extends "note_base.html" %} {% block title %}Ashish Patel: TIL{% endblock %}<!DOCTYPE html>
+{% extends "note_base.html" %}
+
+{% set tils = sql("""
+    select * from til where path = :topic || '_' || :slug || '.md'
+""", {"topic": topic, "slug": slug}, database="til")
+%}
+{% set til = tils[0] %}
+{% if not tils %}
+    {% set raised = raise_404("note not found") %}
+{% endif %}
+
+{% block title %}{{ til.title }} | Ashish Patel’s Notes{% endblock %}
 
 {% block extra_head %}
-<link href="https://github.com/ashishdotme" rel="me" />
-<link rel="alternate" type="application/atom+xml" title="Atom" href="/til/feed.atom" />
-<style>
+<link rel="stylesheet" href="/static/github-light.css">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@ashishdotme">
+<meta name="twitter:title" content="{{ til.title }}">
+<meta name="twitter:description" content="{{ til.body }}">
+<meta name="twitter:image" content="https://notes.ashish.me/-/media/screenshot/{{ til.path }}">
+<meta name="twitter:image:alt" content="Screenshot of this article">
+<meta property="og:url" content="https://notes.ashish.me/til/notes/{{ til.path }}">
+<meta property="og:type" content="article">
+<meta property="og:title" content="{{ til.title }}">
+<meta property="og:description" content="{{ til.body }}">
+<meta property="og:image" content="https://notes.ashish.me/-/media/screenshot/{{ til.path }}">
+<meta property="og:image:alt" content="Screenshot of this article">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="400">
+{% endblock %}
 
-</style>
-{% endblock %} {% block body %}
-
+{% block body %}
 <section class="hero is-light">
   <div class="hero-body">
     <a class="title" href="/">Ashish Patel: TIL</a>
+
     <p class="subtitle mt-1">
       <a style="text-decoration: none" href="/til/feed.atom" title="Atom feed"
         ><svg xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 256 256">
@@ -56,17 +79,9 @@
     </form>
   </div>
 </section>
-<section class="body content mt-2 mb-5">
-{% for row in sql("select topic from til group by topic order by max(created_utc) desc",
-database="til") %}
-<h3>{{ row.topic }}</h3>
-<ul>
-  {% for til in sql("select * from til where topic = :topic order by created_utc desc", {"topic":
-  row.topic}, database="til") %}
-  <li>
-    <a href="/{{ til.topic }}/{{ til.slug }}">{{ til.title }}</a> - {{ til.created[:10] }}
-  </li>
-  {% endfor %}
-</ul>
-{% endfor %} {% endblock %}
+<section class="content body mt-2">
+<h3>{{til.title}}</h3>
+{{ til.html|safe }}
 </section>
+<p class="created ml-3 mb-5">Created {{ til.created }}{% if til.created != til.updated %}, updated {{ til.updated }} &middot; <a href="{{ til.url|replace("https://github.com/ashishdotme/til.ashish.me/blob/", "https://github.com/ashishdotme/til.ashish.me/commits/") }}">History</a>{% endif %} &middot; <a href="{{ til.url }}">Edit</a></p>
+{% endblock %}
