@@ -11,6 +11,9 @@
 </p>
 
 <p align="center">📝 My Today I Learned snippets. Inspired by <a href="hhttps://github.com/simonw/til">simonw/til</a></p>
+<div style='margin:0 auto;width:80%;'>
+  <img src="./.github/assets/til-screen.png" alt="screenshot"/>
+</div>
 <p align="center"><a href="https://til.ashish.me">https://til.ashish.me</a></p>  
 
 <!-- index starts -->
