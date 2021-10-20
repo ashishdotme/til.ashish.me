@@ -1,4 +1,4 @@
-# Common commands
+# PostgreSQL Common commands
 
 ```shell
 # login
