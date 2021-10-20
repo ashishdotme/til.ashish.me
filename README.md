@@ -50,4 +50,12 @@
 ## postgresql
 
 * [Common commands](https://github.com/ashishdotme/til.ashish.me/blob/master/postgresql/common-commands.md) - 2021-03-02
+
+## flask
+
+* [Flask Common commands](https://github.com/ashishdotme/til.ashish.me/blob/master/flask/common-commands.md) - 2021-10-20
+
+## django
+
+* [Django Common commands](https://github.com/ashishdotme/til.ashish.me/blob/master/django/common-commands.md) - 2021-10-20
 <!-- index ends -->
