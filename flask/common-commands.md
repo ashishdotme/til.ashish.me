@@ -1,10 +1,13 @@
 # Flask Common commands
 
-## Create virtual env
+Create virtual env
 
+```
 python3 -m venv env
 source env/bin/activate
+```
 
-## Run
-
+Run
+```
 python -m flask run
+```
