@@ -49,7 +49,7 @@
 
 ## postgresql
 
-* [Common commands](https://github.com/ashishdotme/til.ashish.me/blob/master/postgresql/common-commands.md) - 2021-03-02
+* [PostgreSQL Common commands](https://github.com/ashishdotme/til.ashish.me/blob/master/postgresql/common-commands.md) - 2021-03-02
 
 ## flask
 
