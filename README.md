@@ -62,4 +62,8 @@
 ## nestjs
 
 * [NestJS Common commands](https://github.com/ashishdotme/til.ashish.me/blob/master/nestjs/common-commands.md) - 2022-01-27
+
+## dotnet
+
+* [Dotnet Common commands](https://github.com/ashishdotme/til.ashish.me/blob/master/dotnet/common-commands.md) - 2023-02-26
 <!-- index ends -->
