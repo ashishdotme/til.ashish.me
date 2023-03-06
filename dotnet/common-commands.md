@@ -1,5 +1,10 @@
 # Dotnet Common commands
 
+Select words
+
+```
+ctrl + w
+```
 
 Go to matching brace
 
@@ -43,4 +48,9 @@ Search Everywhere
 ctrl + n
 ```
 
+Navigate to the usage of object
+
+```
+alt + f7
+```
 
