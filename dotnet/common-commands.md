@@ -31,3 +31,16 @@ Go to the bottom of the page
 ctrl + end
 ```
 
+Quickle Navigate files
+
+```
+ctrl + e
+```
+
+Search Everywhere
+
+```
+ctrl + n
+```
+
+
