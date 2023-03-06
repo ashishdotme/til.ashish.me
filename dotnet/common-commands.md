@@ -71,3 +71,15 @@ Refactor this
 ```
 ctrl + shift + r
 ```
+
+Format Code
+
+```
+ctrl + alt + f
+```
+
+Navigate tabs
+
+```
+ctrl + tab
+```
