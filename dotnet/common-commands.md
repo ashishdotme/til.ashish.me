@@ -65,3 +65,9 @@ Navigate through API members
 ```
 alt + up/down
 ```
+
+Refactor this
+
+```
+ctrl + shift + r
+```
