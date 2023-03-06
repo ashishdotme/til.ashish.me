@@ -17,6 +17,7 @@ jobs:
       # We need full history to introspect created/updated:
       with:
         fetch-depth: 0  
+        path: master
     - name: Set up Python
       uses: actions/setup-python@v1
       with:
@@ -33,13 +34,17 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     - name: Build database
-      run: python build_database.py
+      run: |-
+        cd master
+        python build_database.py
     - name: Update README
       run: |-
+        cd master
         python update_readme.py --rewrite
         cat README.md
     - name: Commit and push if README changed
       run: |-
+        cd master
         git diff
         git config --global user.email "ashishsushilpatel@gmail.com"
         git config --global user.name "Ashish Patel"
