@@ -83,3 +83,9 @@ Navigate tabs
 ```
 ctrl + tab
 ```
+
+Navigate bookmarks
+
+```
+ctrl + `
+```
