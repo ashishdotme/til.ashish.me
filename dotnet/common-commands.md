@@ -54,3 +54,14 @@ Navigate to the usage of object
 alt + f7
 ```
 
+Search Window
+
+```
+ctrl + alt + u
+```
+
+Navigate through API members
+
+```
+alt + up/down
+```
