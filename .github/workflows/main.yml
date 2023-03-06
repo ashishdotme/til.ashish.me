@@ -57,6 +57,7 @@ jobs:
       env:
         NOW_TOKEN: ${{ secrets.NOW_TOKEN }}
       run: |-
+          cd master
           datasette publish vercel til.db \
             --token $NOW_TOKEN \
             --branch master \
