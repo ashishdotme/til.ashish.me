@@ -42,6 +42,7 @@
 ## docker
 
 * [Run PostgreSQL](https://github.com/ashishdotme/til.ashish.me/blob/master/docker/run-postgresql.md) - 2020-10-25
+* [Upgrade docker in Ubuntu](https://github.com/ashishdotme/til.ashish.me/blob/master/docker/upgrade-docker.md) - 2024-08-24
 
 ## react
 
